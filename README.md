@@ -39,7 +39,7 @@
 
 3. Запуск через Docker:
 
-    docker-compose up --build
+    docker compose up --build
 
 4. Локальная установка:
 
@@ -61,10 +61,7 @@
 ## Тестирование
 В проекте настроено автоматическое тестирование основных модулей. Текущее покрытие кода составляет **83%** (509 проверенных строк).
 
-Для проверки покрытия выполните команды внутри работающего Docker-контейнера:
-
-    # Установка пакета coverage
-    docker-compose exec app pip install pytest-cov
+Для проверки покрытия выполните команду внутри работающего Docker-контейнера:
 
     # Запуск тестов с выводом отчета по неразмеченным строкам
-    docker-compose exec app pytest --cov=users --cov=materials --cov-report=term-missing
+    docker compose exec app pytest --cov=users --cov=materials --cov-report=term-missing
